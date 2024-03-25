@@ -27,9 +27,11 @@ Twitter’da @mertcobanov olarak bulabilirsiniz, düzenli içerik üretmeye 6 y�
 - Application Development
 
 ### Summary
-
+*Click to expand*
 <details><summary>
-Makale, büyük dil modellerini (LLM) belirli alanlara özgü bilgilerle uyumlu hale getirmenin zorluklarından bahsediyor, çünkü bu modeller genellikle bu bilgilere sahip olmuyor. </summary><br>
+Makale, büyük dil modellerini (LLM) belirli alanlara özgü bilgilerle uyumlu hale getirmenin zorluklarından bahsediyor, çünkü bu modeller genellikle bu bilgilere sahip olmuyor. 
+</summary>
+<br>
 Yazar, kullanıcının özel verilerine uyum sağlamak için yapay talimat veri kümeleri üretebilen, açık kaynaklı ve hafif bir kütüphane olan Bonito adında, maliyeti düşük bir çözüm öneriyor. Bonito, özel görevler oluşturmak için tasarlanmış ve LLM'leri daha iyi hale getirmek için gerekli veri kümelerini oluşturmak için kullanılabilir. Yazar, istenilen sonuçlara ulaşmak için net talimatların verilmesinin önemini vurguluyor, çünkü talimatlar tartışmayı yönlendirip, ilgili ve kullanıcı beklentileriyle uyumlu olmasını sağlıyor.
 
 Makale, Bonito kullanmanın faydalarını, açık kaynak olması, hafif tasarımı ve yapay veri kümelerini ekonomik bir şekilde üretebilme yeteneğini öne çıkarıyor. Yazar ayrıca, LLM'leri kullanarak talimat veri kümeleri oluşturmanın pahalı ve zaman alıcı olabileceğini, bu yüzden Bonito'nun uygun bir alternatif olduğunu belirtiyor. Ek olarak, makale, talimatların ne olduğunu ve istenilen sonuçlara ulaşmak için tartışmayı nasıl yönlendirdiğini anlamanın önemine değiniyor.
@@ -55,7 +57,7 @@ Genel olarak, makale, LLM'leri daha iyi hale getirmek için talimat veri kümele
 - Application Development
 
 ### Summary
-
+*Click to expand*
 <details>
 <summary>
 Shuyi Yang tarafından yazılan "Kendi RAG'inizi Yapın ve Yerel Olarak Laptop'unuzda Çalıştırın: ColBERT + DSPy + Streamlit" başlıklı makale, başlangıç seviyesindeki kişilere basit bir Alın Yazılarını Geliştirme (Retrieval Augmented Generation - RAG) sistemi kurma ve yerel olarak çalıştırma adımlarını anlatır.
@@ -94,7 +96,7 @@ Genel olarak, makale, başlangıç seviyesindeki kişilere laptop'larında yerel
 - Application Development
 
 ### Summary
-
+*Click to expand*
 <details>
 
 <summary> 
@@ -136,7 +138,7 @@ Geliştiriciler, vektör gömülülerinin nasıl çalıştığını ve nasıl ol
 - Retrieval-Augmented Generation
 
 ### Summary
-
+*Click to expand*
 <details> <summary> 
 Bu makalede, Leonie Monigatti, büyük dil modelleri (LLM) tabanlı uygulamalar geliştirmek için DSPy çerçevesinin kullanımının avantajlarını inceliyor. 
 </summary> <br>
