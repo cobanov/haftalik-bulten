@@ -1,0 +1,12 @@
+
+Intro to DSPy: Goodbye Prompting, Hello Programming!
+
+In this article, Leonie Monigatti explores the benefits of using the DSPy framework for building applications based on large language models (LLMs). The author explains that traditional pipelines for LLM-based applications are often complex and fragile, resulting in issues during deployment. To address these problems, DSPy replaces prompting with programming and compiling, providing a more robust solution.
+
+The article begins by defining what DSPy is and how it differs from other frameworks. The author then provides an overview of the current challenges in building LLM-based applications, including the fragility problem. To address this issue, DSPy introduces a new approach that involves programming and compiling instead of prompting. This approach allows for more control over the pipeline and reduces the risk of errors during deployment.
+
+The author then provides an example of a full end-to-end DSPy pipeline for Retrieval-Augmented Generation (RAG) using the Weaviate dataset. The pipeline demonstrates how DSPy can be used to build complex LLM-based applications with greater ease and reliability.
+
+Throughout the article, Monigatti emphasizes the importance of programming and compiling in DSPy, highlighting the benefits of this approach over traditional prompting methods. The author also provides practical tips for getting started with DSPy and offers resources for further learning.
+
+In conclusion, the article provides a comprehensive introduction to DSPy and its potential to revolutionize the way we build LLM-based applications. By replacing prompting with programming and compiling, DSPy offers a more robust and reliable solution for building complex applications.

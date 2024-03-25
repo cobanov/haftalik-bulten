@@ -1,0 +1,14 @@
+
+The article "Build Your Own RAG and Run It Locally on Your Laptop: ColBERT + DSPy + Streamlit" by Shuyi Yang provides a step-by-step tutorial for beginners to build and run a simple Retrieval Augmented Generation (RAG) system locally. The author explains the concept of RAG, which is a smart assistant that helps with writing tasks, and how it can be built and run on a laptop using ColBERT, DSPy, and Streamlit.
+
+The tutorial begins by explaining the importance of understanding the basics of RAG and its potential applications in various industries. The author then provides a list of necessary tools and libraries, including ColBERT, DSPy, and Streamlit, which are essential for building the RAG system.
+
+The next section of the article focuses on installing and setting up the necessary tools and libraries. The author provides detailed instructions on how to install ColBERT, DSPy, and Streamlit, as well as how to configure them for optimal performance.
+
+Once the tools and libraries are set up, the author explains how to build the RAG system using ColBERT and DSPy. This involves creating a simple text-based interface that allows users to input prompts and receive generated responses. The author provides code examples and explanations of how to implement these features.
+
+The final section of the article covers how to deploy the RAG system locally on the user's laptop using Streamlit. The author explains how to create a Streamlit app that can be run locally, without the need for any external dependencies or servers.
+
+Throughout the tutorial, the author provides helpful tips and tricks for beginners, such as how to handle common errors and how to optimize the RAG system for better performance. The article concludes by providing a summary of the key takeaways and encouraging readers to try building their own RAG systems using the provided code examples.
+
+Overall, the article provides a comprehensive and accessible tutorial for beginners who want to build and run a simple RAG system locally on their laptops. The author's use of clear and concise language, along with detailed code examples, makes it easy for readers to follow along and understand the concepts presented in the tutorial.
