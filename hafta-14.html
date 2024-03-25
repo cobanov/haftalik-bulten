@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hafta-14.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+ body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 16px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 24px);
+	word-wrap: break-word;
+	max-width: 650px;
+	margin: 30px auto;
+	padding: 30px;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="cobanov-haftalik-makale-bulteni---ai-week-14">Cobanov Haftalik Makale Bulteni - AI Week 14</h1>
+<p align="center"><img src="assets/poster-week14.jpeg" alt="cloud ruins by mert cobnoav, 2022" width="650"><p>
+<p>Yoğun gelen mesajlardan sonra hepimizin derlenmiş, seçilmiş ve özellikle internet çöplüğünden ayıklanmış kaliteli içeriklere ihtiyacı olduğunu hissetmeye başladım. Zaten günlük rutinimde bu makaleleri sabahtan akşama kadar araştırıyorum, beğendiklerimi bir kenara not alıyordum. Sonra dedim ki, neden bu bulduklarımı sizinle paylaşmayayım? Hem siz de vakit kaybetmeden işinize yarayacak, kaliteli içeriklere ulaşmış olursunuz.</p>
+<p>Yaklaşık olarak günde 3, haftada en az 20 makale not alıyorum (hesaplarıma göre yaklaşık 300 makaleye hızlı bir bakış attıktan sonra), bunlardan en can alıcılarını, en yararlı bulduklarımı özetleyip, ilgili anahtar taglerle birlikte sizinle paylaşmaya karar verdim.</p>
+<p>Twitter’da @mertcobanov olarak bulabilirsiniz, düzenli içerik üretmeye 6 yıldır devam ediyorum. Umarım bu haftalık bülten, size zaman kazandırıp, iyi bir kısa yol sunacaktır.</p>
+<p><strong>Cobanov</strong></p>
+<hr>
+<div style="page-break-after: always;"></div>
+<h2 id="1-how-to-generate-instruction-datasets-from-any-documents-for-llm-fine-tuning">1. How to Generate Instruction Datasets from Any Documents for LLM Fine-Tuning</h2>
+<h3 id="source">Source</h3>
+<blockquote>
+<p><a href="https://towardsdatascience.com/how-to-generate-instruction-datasets-from-any-documents-for-llm-fine-tuning-abb319a05d91">https://towardsdatascience.com/how-to-generate-instruction-datasets-from-any-documents-for-llm-fine-tuning-abb319a05d91</a></p>
+</blockquote>
+<h3 id="tags">Tags</h3>
+<ul>
+<li>Large Language Models</li>
+<li>Programming and Compiling</li>
+<li>Application Development</li>
+</ul>
+<h3 id="summary">Summary</h3>
+<p><em>Click to expand</em></p>
+<details><summary>
+Makale, büyük dil modellerini (LLM) belirli alanlara özgü bilgilerle uyumlu hale getirmenin zorluklarından bahsediyor, çünkü bu modeller genellikle bu bilgilere sahip olmuyor. 
+</summary>
+<br>
+Yazar, kullanıcının özel verilerine uyum sağlamak için yapay talimat veri kümeleri üretebilen, açık kaynaklı ve hafif bir kütüphane olan Bonito adında, maliyeti düşük bir çözüm öneriyor. Bonito, özel görevler oluşturmak için tasarlanmış ve LLM'leri daha iyi hale getirmek için gerekli veri kümelerini oluşturmak için kullanılabilir. Yazar, istenilen sonuçlara ulaşmak için net talimatların verilmesinin önemini vurguluyor, çünkü talimatlar tartışmayı yönlendirip, ilgili ve kullanıcı beklentileriyle uyumlu olmasını sağlıyor.
+<p>Makale, Bonito kullanmanın faydalarını, açık kaynak olması, hafif tasarımı ve yapay veri kümelerini ekonomik bir şekilde üretebilme yeteneğini öne çıkarıyor. Yazar ayrıca, LLM'leri kullanarak talimat veri kümeleri oluşturmanın pahalı ve zaman alıcı olabileceğini, bu yüzden Bonito'nun uygun bir alternatif olduğunu belirtiyor. Ek olarak, makale, talimatların ne olduğunu ve istenilen sonuçlara ulaşmak için tartışmayı nasıl yönlendirdiğini anlamanın önemine değiniyor.</p>
+<p>Genel olarak, makale, LLM'leri daha iyi hale getirmek için talimat veri kümeleri üretme potansiyeli olan Bonito hakkında detaylı bir bakış sunuyor ve net talimatların istenilen sonuçlara ulaşmak için önemini vurguluyor.</p>
+</details>
+<hr>
+<div style="page-break-after: always;"></div>
+<h2 id="2-build-your-own-rag-and-run-it-locally-on-your-laptop-colbert--dspy--streamlit">2. Build Your Own RAG and Run It Locally on Your Laptop: ColBERT + DSPy + Streamlit</h2>
+<h3 id="source">Source</h3>
+<blockquote>
+<p><a href="https://medium.com/towards-data-science/rag-on-your-laptop-colbert-dspy-streamlit-c206ea92188f">https://medium.com/towards-data-science/rag-on-your-laptop-colbert-dspy-streamlit-c206ea92188f</a></p>
+</blockquote>
+<h3 id="tags">Tags</h3>
+<ul>
+<li>Large Language Models</li>
+<li>Programming and Compiling</li>
+<li>Application Development</li>
+</ul>
+<h3 id="summary">Summary</h3>
+<p><em>Click to expand</em></p>
+<details>
+<summary>
+Shuyi Yang tarafından yazılan "Kendi RAG'inizi Yapın ve Yerel Olarak Laptop'unuzda Çalıştırın: ColBERT + DSPy + Streamlit" başlıklı makale, başlangıç seviyesindeki kişilere basit bir Alın Yazılarını Geliştirme (Retrieval Augmented Generation - RAG) sistemi kurma ve yerel olarak çalıştırma adımlarını anlatır.
+</summary><br>
+<p>Yazar, yazma görevlerinde yardımcı olan akıllı bir asistan olan RAG kavramını ve bunun ColBERT, DSPy ve Streamlit kullanılarak bir laptop üzerinde nasıl kurulup çalıştırılabileceğini açıklar.</p>
+<p>Ders, RAG'in temellerini ve çeşitli endüstrilerdeki potansiyel uygulamalarını anlamanın önemini açıklayarak başlar. Yazar daha sonra RAG sistemi kurmak için gerekli olan ColBERT, DSPy ve Streamlit gibi araçlar ve kütüphanelerin bir listesini sunar.</p>
+<p>Makalenin bir sonraki bölümü, gerekli araçların ve kütüphanelerin kurulumu ve ayarlanmasına odaklanır. Yazar, ColBERT, DSPy ve Streamlit'in nasıl kurulacağı ve optimal performans için nasıl yapılandırılacağı konusunda detaylı talimatlar sağlar.</p>
+<p>Araçlar ve kütüphaneler kurulduktan sonra, yazar ColBERT ve DSPy kullanarak RAG sisteminin nasıl kurulacağını açıklar. Bu, kullanıcıların isteklerini girebilecekleri ve üretilen yanıtları alabilecekleri basit bir metin tabanlı arayüz oluşturmayı içerir. Yazar, bu özellikleri nasıl uygulayacaklarına dair kod örnekleri ve açıklamalar sağlar.</p>
+<p>Makalenin son bölümü, RAG sisteminin Streamlit kullanılarak kullanıcının laptop'unda yerel olarak nasıl dağıtılacağını kapsar. Yazar, herhangi bir harici bağımlılık veya sunucu gerektirmeyen, yerel olarak çalıştırılabilecek bir Streamlit uygulaması oluşturmayı açıklar.</p>
+<p>Tüm ders boyunca, yazar başlangıç seviyesindekilere yönelik yararlı ipuçları ve püf noktaları sunar, örneğin yaygın hataların nasıl ele alınacağı ve RAG sisteminin daha iyi performans için nasıl optimize edileceği gibi. Makale, anahtar noktaların özetini sunarak ve okuyucuları sağlanan kod örneklerini kullanarak kendi RAG sistemlerini kurmaya teşvik ederek sona erer.</p>
+<p>Genel olarak, makale, başlangıç seviyesindeki kişilere laptop'larında yerel olarak basit bir RAG sistemi kurup çalıştırmak isteyenler için kapsamlı ve erişilebilir bir ders sunar. Yazarın açık ve öz dil kullanımı, detaylı kod örnekleriyle birlikte, okuyucuların dersi takip etmesini ve sunulan kavramları anlamasını kolaylaştırır.</p>
+</details>
+<hr>
+<div style="page-break-after: always;"></div>
+<h2 id="3-vector-embeddings-explained-for-developers">3. Vector Embeddings Explained for Developers!</h2>
+<h3 id="source">Source</h3>
+<blockquote>
+<p><a href="https://medium.com/gitconnected/vector-embeddings-explained-for-developers-6bd9800d3635">https://medium.com/gitconnected/vector-embeddings-explained-for-developers-6bd9800d3635</a></p>
+</blockquote>
+<h3 id="tags">Tags</h3>
+<ul>
+<li>Large Language Models</li>
+<li>Programming and Compiling</li>
+<li>Application Development</li>
+</ul>
+<h3 id="summary">Summary</h3>
+<p><em>Click to expand</em></p>
+<details>
+<summary> 
+Bu makalede, vektör gömülülerini ve makine öğrenimi ile veri bilimindeki önemlerini tartıştık. 
+</summary>
+<br>
+<p>Ayrıca, OpenAI, Cohere ve HuggingFace gibi popüler gömülü modelleri kullanarak vektör gömülülerini nasıl oluşturabileceğimizi ve bunları SingleStore veritabanında nasıl saklayabileceğimizi keşfettik.</p>
+<p>Makalede ele alınan ana noktalar şunlardır:</p>
+<ol>
+<li>Vektör gömülüler, metin, görüntü ve diğer veri formlarının etkili bir şekilde işlenmesi ve analiz edilmesini sağlayarak makine öğrenimi ve veri biliminde hayati bir bileşendir.</li>
+<li>Veri noktalarını, yüksek boyutlu bir uzayda vektörler olarak temsil ederek, boyut indirgeme yoluyla daha düşük boyutlu bir uzaya indirgeyerek ve benzerliğe göre kümeleme veya sınıflandırma yaparak vektör gömülülerinin nasıl çalıştığını açıkladık.</li>
+<li>Farklı özellikler ve yetenekler sunan OpenAI, Cohere ve HuggingFace gibi popüler gömülü modellerden bahsettik.</li>
+<li>Bu modelleri kullanarak vektör gömülülerini nasıl oluşturacağımızı gösterirken, modellerle etkileşim kurmak için Python kütüphaneleri ve API anahtarlarının nasıl kullanılacağını gösterdik.</li>
+<li>Oluşturulduktan sonra, vektör gömülülerini bir SingleStore veritabanında nasıl saklayacağımızı gösterdik. SQL Düzenleyici aracılığıyla bunu yapmanın kolaylığına ve indeksli yaklaşık-en-yakın-komşu (ANN) araması yapma yeteneğine dikkat çektik.</li>
+<li>Son olarak, vektör gömülülerinin potansiyelinden ve AI'da, sohbet robotlarından içerik öneri sistemlerine kadar uygulamalarından bahsettik.</li>
+</ol>
+<p>Geliştiriciler, vektör gömülülerinin nasıl çalıştığını ve nasıl oluşturulup saklanacağını anlayarak, daha sofistike makine öğrenimi modelleri ve uygulamaları geliştirmek için bu güçlü araçları kullanabilirler.</p>
+</details>
+<hr>
+<div style="page-break-after: always;"></div>
+<h2 id="4-intro-to-dspy-goodbye-prompting-hello-programming">4. Intro to DSPy: Goodbye Prompting, Hello Programming!</h2>
+<h3 id="source">Source</h3>
+<blockquote>
+<p><a href="https://medium.com/towards-data-science/intro-to-dspy-goodbye-prompting-hello-programming-4ca1c6ce3eb9">https://medium.com/towards-data-science/intro-to-dspy-goodbye-prompting-hello-programming-4ca1c6ce3eb9</a></p>
+</blockquote>
+<h3 id="tags">Tags</h3>
+<ul>
+<li>DSPy Framework</li>
+<li>Large Language Models</li>
+<li>Programming and Compiling</li>
+<li>Application Development</li>
+<li>Retrieval-Augmented Generation</li>
+</ul>
+<h3 id="summary">Summary</h3>
+<p><em>Click to expand</em></p>
+<details> <summary> 
+Bu makalede, Leonie Monigatti, büyük dil modelleri (LLM) tabanlı uygulamalar geliştirmek için DSPy çerçevesinin kullanımının avantajlarını inceliyor. 
+</summary> <br>
+Geleneksel yöntemlerle yapılan LLM tabanlı uygulamaların genellikle karmaşık ve kırılgan olduğunu, bu durumun da dağıtım sırasında sorunlara neden olduğunu açıklıyor. Bu problemleri çözmek için DSPy, sorular sorma yerine programlama ve derlemeyi önererek daha sağlam bir çözüm sunuyor.
+<p>Makale, DSPy'nin ne olduğunu ve diğer çerçevelerden nasıl farklı olduğunu tanımlayarak başlıyor. Ardından, LLM tabanlı uygulamalar geliştirirken karşılaşılan güncel zorluklar, özellikle de kırılganlık problemi üzerine bir genel bakış sunuyor. Bu sorunu çözmek için DSPy, soru sorma yerine programlama ve derleme içeren yeni bir yaklaşım sunar. Bu yaklaşım, işlem akışı üzerinde daha fazla kontrol sağlar ve dağıtım sırasında hata riskini azaltır.</p>
+<p>Yazar, Weaviate veri setini kullanarak Retrieval-Augmented Generation (RAG) için baştan sona bir DSPy iş akışı örneği veriyor. Bu iş akışı, DSPy'nin karmaşık LLM tabanlı uygulamaları daha kolay ve güvenilir bir şekilde nasıl oluşturabileceğini gösteriyor.</p>
+<p>Makale boyunca Monigatti, DSPy'de programlamanın ve derlemenin önemini vurguluyor ve bu yaklaşımın geleneksel soru sorma yöntemlerine göre avantajlarını belirtiyor. Ayrıca, DSPy ile başlamak için pratik ipuçları sunuyor ve daha fazla öğrenim için kaynaklar öneriyor.</p>
+<p>Sonuç olarak, makale, DSPy'ye ve LLM tabanlı uygulamaları geliştirme şeklimizi devrim niteliğinde değiştirebilecek potansiyeline geniş bir giriş sağlıyor. Soru sorma yerine programlama ve derlemeyi tercih ederek, DSPy, karmaşık uygulamalar oluşturmak için daha sağlam ve güvenilir bir çözüm sunuyor.</p>
+</details>
+<hr>
+<div style="page-break-after: always;"></div>
+
+</body>
+</html>
